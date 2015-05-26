@@ -1,3 +1,47 @@
+Note de Frais
+========================
+
+Dans le cadre de ma formation au CESI de Nantes, les étudiants devaient réalisé un projet en PHP.
+
+Technologie utilisée 
+-----------------------
+* Langage : PHP 5.5.12
+* Serveur local : WAMP
+* Base de données MySQL
+* IDE : Netbeans 8.0.2
+* Framework : [**Symfony2**][1] avec bootstrap
+
+Les bundles utilisés avec Symfony2
+-----------------------------------
+* [**FOSUserBundle**][14] : Gestion des utilisateurs
+* [**PHPExcel**][15] : Gestion des fichiers EXCEL
+* [**ObHighchartsBundle**][16] : Gestion des graphiques
+
+Le besoin du projet
+-----------------------
+* Projet uniquement en PHP
+* Import d'un fichier EXCEL 
+* Enregistrement des informations du EXCEL dans la base de données
+* Mode administrateur 
+
+
+Entités de la base de données 
+
+* User : qui étend BaseUser du FOSUserBundle, contient les utilisateurs inscrits
+* Categorie : contient les catégories et sous catégories
+* LigneFrais : contient le montant pour une catégorie et date donnée.
+
+Fonctionnalité du projet
+-------------------------
+
+Pour l'utilisateur :
+* Importation du fichier EXCEL
+* Graphe avec les catégories sur les notes de frais importées.
+
+Pour l'administrateur :
+* Importation du fichier EXCEL
+* Graphique avec tous les utilisateurs et toutes les catégories.
+
 Symfony Standard Edition
 ========================
 
@@ -67,3 +111,6 @@ Enjoy!
 [11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+[14]: https://github.com/FriendsOfSymfony/FOSUserBundle
+[15]: https://github.com/PHPOffice/PHPExcel
+[16]: https://github.com/marcaube/ObHighchartsBundle
