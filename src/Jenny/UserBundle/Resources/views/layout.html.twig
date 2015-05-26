@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset='utf-8' " />
+        <title>{% block title %}Note de frais{% endblock %}</title>
+        {% block stylesheet %}
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        {% endblock %}
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                        <a class="navbar-brand" href="{{ url('_accueil') }}">Accueil</a>
+                        <a class="navbar-brand" href="{{ url('_import') }}">Import</a>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a class="navbar-brand" href="{{ url('_adminstat') }}">Statistiques</a>
+                        {% else%}
+                            <a class="navbar-brand" href="{{ url('_stat') }}">Statistiques</a>
+                        {% endif %}
+                        <a class="navbar-brand" href="{{ path('fos_user_security_logout') }}" align="right">Déconnexion</a>
+                    {% else %}
+                        <a class="navbar-brand" href="{{ path('fos_user_security_login') }}" align="right">Connexion</a>
+                        <a class="navbar-brand" href="{{ path('fos_user_registration_register') }}" align="right">Inscription</a>
+                    {%endif%}
+                </div>
+            </div>
+        </nav>
+
+        {% block body %}
+        <body>
+            <div>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                {% endif %}
+            </div>
+
+            {% for type, messages in app.session.flashBag.all %}
+                {% for message in messages %}
+                    <div class="{{ type }}">
+                        {{ message|trans({}, 'FOSUserBundle') }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+            <div>
+                {% block fos_user_content %}
+                {% endblock fos_user_content %}
+            </div>
+        </body
+    {% endblock %}
+</body>
+{% block javascript %}
+
+{% endblock %}
+</html>

@@ -1,0 +1,22 @@
+{% extends "JennyUserBundle::layout.html.twig" %}
+
+{% block body %}
+
+    <form action="#" method="post">
+        <table class="table table-striped table-bordered table-hover" style="width: 200px;" align="center">
+            <tr>
+                <td>Les notes de frais de cette semaine ont déjà été importé. Que voulez-vous faire ? </td>
+            </tr>    
+
+            <tr>
+                <td><input type="radio" name="choix" id="remplacer" value="replace">Remplacer</td>
+            </tr>    
+            <tr>
+                <td><input type="radio" name="choix" id="nothing" value="nothing" checked>Ne rien faire</td>
+            </tr>   
+            <tr>
+                <td><input type="submit" value="Valider" name="submit"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

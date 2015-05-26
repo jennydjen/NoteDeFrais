@@ -1,0 +1,12 @@
+{% extends "JennyUserBundle::layout.html.twig" %}
+
+{% block body %}
+    <h1>Bienvenue sur mon site de note de frais : {{ user.prenom}} {{ user.nom}}</h1>
+
+    <p align='center'>
+        <img src="{{ asset('images/image02.png') }}" alt="Excel"  />
+        <img src="{{ asset('images/image01.jpg') }}" alt="Statistique de note de frais"/>
+    </p>
+
+{% endblock %}
+

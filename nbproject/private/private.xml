@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/ImportBundle/Entity/ReadFile.php</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/ImportBundle/Resources/views/import/import.html.twig</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/composer.json</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/ImportBundle/Controller/DefaultController.php</file>
+        </group>
+        <group name="Jennifer">
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/StatBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/ImportBundle/Entity/ReadFile.php</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/app/config/security.yml</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/ImportBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/UserBundle/Resources/views/layout.html.twig</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/sql/03_create_ligne_frais.sql</file>
+            <file>file:/C:/Wamp/www/NoteDeFrais/src/Jenny/StatBundle/Resources/views/Stats/stats.html.twig</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,20 @@
+jenny_stat:
+    resource: "@JennyStatBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+jenny_import:
+    resource: "@JennyImportBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+jenny_user:
+    resource: "@JennyUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+login_check:
+    pattern:   /login_check
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

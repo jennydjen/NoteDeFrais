@@ -1,0 +1,37 @@
+{# empty Twig template #}
+
+{% extends "JennyUserBundle::layout.html.twig" %}
+
+{% block body %}
+
+    {# S'il y a une erreur, on l'affiche dans un joli cadre #}
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    {# S'il y a un succes, on l'affiche dans un joli cadre #}
+    {% if message %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endif %}
+    
+    {% if warning %}
+        <div class="alert alert-warning">{{ warning }}</div>
+    {% endif %}
+
+    {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
+    <form action="import" method="post" enctype="multipart/form-data">
+        <table class="table table-striped table-bordered table-hover" style="width: 200px;" align="center">
+            <tr>
+                <td>Sélectionnez le fichier à charger: </td>
+            </tr>    
+
+            <tr>
+                <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+            </tr>    
+
+            <tr>
+                <td><input type="submit" value="Charger le fichier" name="submit"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
